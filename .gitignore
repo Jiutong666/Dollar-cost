@@ -1,0 +1,29 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Generated output
+output/reports/*.md
+backtest/backtest_monthly.csv
+
+# User-provided news (may contain personal notes)
+data/monthly_news.txt
+
+# Debug / test artifacts
+data/ie_data_test.xls
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
