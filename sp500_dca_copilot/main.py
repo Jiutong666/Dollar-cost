@@ -71,15 +71,25 @@ Examples:
 # ── Main ───────────────────────────────────────────────────────────
 
 
+BANNER = r"""
+  ██████╗  ██████╗ ██╗      ██╗      █████╗ ██████╗
+  ██╔══██╗██╔═══██╗██║      ██║     ██╔══██╗██╔══██╗
+  ██║  ██║██║   ██║██║      ██║     ███████║██████╔╝
+  ██║  ██║██║   ██║██║      ██║     ██╔══██║██╔══██╗
+  ██████╔╝╚██████╔╝███████╗ ███████╗██║  ██║██║  ██║
+  ╚═════╝  ╚═════╝ ╚══════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
+         S&P 500 DCA · 定投纪律助手 · v1.0
+"""
+
+
 def main() -> None:
     args = parse_args()
     setup_logging(verbose=args.verbose)
     logger = logging.getLogger(__name__)
 
-    logger.info("=" * 60)
-    logger.info("S&P 500 DCA Co-pilot — Monthly Report Generator")
+    import sys
+    print(BANNER, file=sys.stderr)
     logger.info(f"Max monthly investment: ${args.amount:.2f} USD")
-    logger.info("=" * 60)
 
     # ── Step 1: .env loaded by config.py at import time ─────────
 
